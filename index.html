@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="content_text">
+        <h1>CRUDS</h1>
+        <h3>Poject Management System</h3>
+    </div>
+
+    <div class="container my-5">
+        <form>
+            <div class="mb-3 form-group">
+                <label class="form-label">Product Name : </label>
+                <input type="text" class="form-control" id="productNameInp" placeholder="Name" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label class="form-label">Product Price : </label>
+                <div class="row">
+                    <div class="col-md-2 my-sm-1">
+                        <input type="number" class="form-control" id="productPriceInp" placeholder="price" required>
+                    </div>
+                    <div class="col-md-2 my-sm-1">
+                        <input type="number" class="form-control" id="productTaxInp" placeholder="taxes" >
+                    </div>
+                    <div class="col-md-2 my-sm-1">
+                        <input type="number" class="form-control" id="productAdsInp" placeholder="ads" >
+                    </div>
+                    <div class="col-md-2 my-sm-1">
+                        <input type="number" class="form-control" id="productDiscouontInp" placeholder="discount">
+                    </div>
+                    <div class="col-md-2 my-sm-1" style="line-height: 200%;">
+                        <p id="containPrice">total price: <span id="totalPrice">0$</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 form-group">
+                <label class="form-label">product count : </label>
+                <input type="number" class="form-control" id="productCountInp" placeholder="count">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="form-label">product Category : </label>
+                <input type="text" class="form-control" id="productCategoryInp" placeholder="category" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label class="form-label">Product Desc : </label>
+                <textarea class="form-control" id="productDescInp" placeholder="Descriptioin" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="btnAddProduct">add Product</button>
+            <button type="submit" class="btn btn-warning d-none" id="btnUpdateProduct">Update Product</button>
+        </form>
+    </div>
+    
+    <div class="container m-auto w-50 my-5">
+        <input id="productSearchInp" type="text" class="form-control" placeholder="Search">
+        <button class="btn btn-danger my-3 w-100" id="deleteProducts">Delete products</button>
+        
+    </div>
+
+
+    <div class="container py-3">
+        <table class="table  m-auto py-2" id="productTable">
+            <thead>
+                <th>id </th>
+                <th>title </th>
+                <th>price </th>
+                <th>tax </th>
+                <th>ads </th>
+                <th>discount </th>
+                <th>category </th>
+                <th>desc </th>
+                <th>count </th>
+                <th>update </th>
+                <th>delete </th>
+            </thead>
+            <tbody class="t-center" id="tBody"></tbody>
+
+        </table>
+    </div>
+
+    
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
